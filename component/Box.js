@@ -1,43 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-const Box = () => {
-  const [color, setColor] = useState("#9945FF"); // Default color
-
-  useEffect(() => {
-    const fetchColor = async () => {
-      const response = await fetch('/api/color');
-      const data = await response.json();
-      setColor(data.color);
-    };
-
-    fetchColor();
-    const intervalId = setInterval(fetchColor, 100); // Poll every 100ms
-
-    return () => clearInterval(intervalId);
-  }, []);
-
+const Box = ({ width, height, title, children }) => {
   return (
     <motion.div
       style={{
-        width: 200,
-        height: 200,
-        backgroundColor: "#FFFFFF", // White box
-        border: `1px solid ${color}`, // Dynamic border color
-        position: "absolute",
-        zIndex: 1, // Make sure it's on top of the background
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)", // Center the box
+        width: width || 'auto',
+        height: height || 'auto',
+        backgroundColor: "rgba(31, 41, 55, 0.55)", // Dark background with some transparency
+        borderRadius: "10px",
+        padding: "15px",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: `0px 0px 5px 3px ${color}`, // Dynamic glowing effect
-        borderRadius: "20px", // Rounded corners
+        flexDirection: "column",
+        backdropFilter: "blur(50px)", // Add blur effect for glass-like appearance
+        border: "1px solid rgba(255, 255, 255, 0.1)", // Subtle border
       }}
-      whileHover={{ scale: 1.1 }} // Slightly increase size on hover
+      whileHover={{ scale: 1.02 }}
     >
-      {/* Add any content here if needed, currently empty */}
+      {title && <h2 style={{ color: "#FFFFFF", marginBottom: "10px" }}>{title}</h2>}
+      {children}
     </motion.div>
   );
 };
