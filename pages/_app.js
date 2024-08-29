@@ -4,6 +4,7 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import { WalletProvider } from '../context/WalletContext'; // Import your WalletContext
+import '/styles/global.css';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
 

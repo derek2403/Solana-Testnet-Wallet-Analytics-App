@@ -36,8 +36,24 @@ const AccountBalance = () => {
   }, [pkey]);
 
   if (!pkey) {
-    return <p>Loading wallet information...</p>;
+    return (
+      <>
+        <img 
+          src="/connect-wallet-image.png" 
+          alt="Connect Wallet" 
+          style={{
+            width: '100px',
+            height: '100px',
+            objectFit: 'contain'
+          }}
+        />
+        <p style={{ marginTop: '10px', color: '#FFFFFF' }}>
+          Please connect your wallet to view transaction history
+        </p>
+      </>
+    );
   }
+  
 
   if (loading) {
     return <p>Loading balance...</p>;

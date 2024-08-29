@@ -4,7 +4,8 @@ import Dashboard from '../component/Dashboard';
 
 export default function Home() {
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', fontFamily:"sans-serif" }}>
+    
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
       <Background />
       <Navbar />
       <Dashboard />
