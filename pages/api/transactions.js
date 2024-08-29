@@ -1,8 +1,24 @@
-// pages/api/transactions.js
-
 import { Connection, clusterApiUrl, PublicKey } from '@solana/web3.js';
+import fs from 'fs/promises';
+import path from 'path';
 
-// Handler function for API requests
+const CACHE_FILE = path.join(process.cwd(), 'data', 'transactions_cache.json');
+const CACHE_EXPIRY = 60 * 60 * 1000; // 1 hour in milliseconds
+
+async function readCache() {
+  try {
+    const data = await fs.readFile(CACHE_FILE, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    return null;
+  }
+}
+
+async function writeCache(data) {
+  await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true });
+  await fs.writeFile(CACHE_FILE, JSON.stringify(data));
+}
+
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { publicKey } = req.body;
@@ -11,9 +27,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Public key is required' });
     }
 
-    const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-
     try {
+      // Check cache first
+      const cache = await readCache();
+      if (cache && cache.publicKey === publicKey && Date.now() - cache.timestamp < CACHE_EXPIRY) {
+        return res.status(200).json(cache.transactions);
+      }
+
+      // If cache miss or expired, fetch from Solana
+      const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
       const parsedPublicKey = new PublicKey(publicKey);
       const signatures = await connection.getSignaturesForAddress(parsedPublicKey);
       const transactions = await Promise.all(
@@ -21,6 +43,13 @@ export default async function handler(req, res) {
       );
 
       const filteredTransactions = transactions.filter(tx => tx !== null);
+
+      // Update cache
+      await writeCache({
+        publicKey,
+        transactions: filteredTransactions,
+        timestamp: Date.now()
+      });
 
       res.status(200).json(filteredTransactions);
     } catch (error) {

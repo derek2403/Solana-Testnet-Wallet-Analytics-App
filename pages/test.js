@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useWalletContext } from '../context/WalletContext'; // Adjust the import path
+import { useWalletContext } from '../context/WalletContext';
 
 const TransactionFetcher = () => {
   const { pkey } = useWalletContext();
