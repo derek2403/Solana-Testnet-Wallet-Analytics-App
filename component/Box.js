@@ -23,7 +23,7 @@ const Box = () => {
         width: 200,
         height: 200,
         backgroundColor: "#FFFFFF", // White box
-        border: `2px solid ${color}`, // Dynamic border color
+        border: `1px solid ${color}`, // Dynamic border color
         position: "absolute",
         zIndex: 1, // Make sure it's on top of the background
         top: "50%",
@@ -32,7 +32,7 @@ const Box = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        boxShadow: `0px 0px 15px 10px ${color}80`, // Dynamic glowing effect
+        boxShadow: `0px 0px 5px 3px ${color}`, // Dynamic glowing effect
         borderRadius: "20px", // Rounded corners
       }}
       whileHover={{ scale: 1.1 }} // Slightly increase size on hover
