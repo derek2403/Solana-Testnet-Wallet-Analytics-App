@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
-import Navbar from '@/component/Navbar/Navbar';
+import Navbar from '@/component/Navbar';
 import Background from '../component/Background';
 import Dashboard from '../component/Dashboard';
 import MobileDashboard from '../component/MobileDashboard';

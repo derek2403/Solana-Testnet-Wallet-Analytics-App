@@ -6,9 +6,9 @@ import TransactionHistory from "../component/TransactionHistory";
 import TransactionPopup from "../component/TransactionPopup";
 import { useTransactions } from "../hooks/useTransactions";
 import { useWalletContext } from "../context/WalletContext";
-import { OnChainMarkets, LiquidityChart, TopPerformingTokens } from '../component/TopPerformingTokens';
-import Navbar from "@/component/Navbar/Navbar";
+import { TopPerformingTokens } from '../component/TopPerformingTokens';
 import Background from "@/component/Background";
+import MobileNavbar from "./MobileNavbar";
 
 const MobileDashboard = () => {
   const { pkey } = useWalletContext();
@@ -30,7 +30,7 @@ const MobileDashboard = () => {
 
   return (
     <>
-      <Navbar />
+      <MobileNavbar />
       <Background />
       <div
         style={{
@@ -68,7 +68,7 @@ const MobileDashboard = () => {
               textAlign: 'center'
             }}>
               <img 
-                src="/connect-wallet-image.png" 
+                src="/bankrupt.png" 
                 alt="Connect Wallet" 
                 style={{
                   width: '50px',

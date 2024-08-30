@@ -7,7 +7,7 @@ import { useTransactions } from "../hooks/useTransactions";
 import { useWalletContext } from "../context/WalletContext";
 import { OnChainMarkets, LiquidityChart, TopPerformingTokens } from './TopPerformingTokens';
 import Background from "./Background";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar";
 
 
 const Dashboard = () => {
@@ -56,7 +56,7 @@ const Dashboard = () => {
                 textAlign: 'center'
               }}>
                 <img 
-                  src="/connect-wallet-image.png" 
+                  src="/bankrupt.png" 
                   alt="Connect Wallet" 
                   style={{
                     width: '100px',

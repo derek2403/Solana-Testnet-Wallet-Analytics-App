@@ -39,7 +39,7 @@ const AccountBalance = () => {
     return (
       <>
         <img 
-          src="/connect-wallet-image.png" 
+          src="/bankrupt.png" 
           alt="Connect Wallet" 
           style={{
             width: '100px',
@@ -48,7 +48,7 @@ const AccountBalance = () => {
           }}
         />
         <p style={{ marginTop: '10px', color: '#FFFFFF' }}>
-          Please connect your wallet to view transaction history
+          Please connect your wallet to view account balance
         </p>
       </>
     );

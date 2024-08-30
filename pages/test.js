@@ -7,7 +7,7 @@ import TransactionPopup from "../component/TransactionPopup";
 import { useTransactions } from "../hooks/useTransactions";
 import { useWalletContext } from "../context/WalletContext";
 import { OnChainMarkets, LiquidityChart, TopPerformingTokens } from '../component/TopPerformingTokens';
-import Navbar from "@/component/Navbar/Navbar";
+import Navbar from "@/component/Navbar";
 import Background from "@/component/Background";
 
 const MobileDashboard = () => {
