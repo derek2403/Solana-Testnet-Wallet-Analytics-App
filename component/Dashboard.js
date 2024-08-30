@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "./Box";
 import AccountBalance from "./AccountBalance";
 import TransactionHistory from "./TransactionHistory";
@@ -6,6 +6,8 @@ import TransactionPopup from "./TransactionPopup";
 import { useTransactions } from "../hooks/useTransactions";
 import { useWalletContext } from "../context/WalletContext";
 import { OnChainMarkets, LiquidityChart, TopPerformingTokens } from './TopPerformingTokens';
+import Background from "./Background";
+import Navbar from "./Navbar/Navbar";
 
 
 const Dashboard = () => {
@@ -13,8 +15,11 @@ const Dashboard = () => {
   const [showPopup, setShowPopup] = useState(false);
   const { transactions, loading, error, refreshTransactions } = useTransactions(pkey);
 
+
   return (
     <>
+      <Background/>
+      <Navbar/>
       <div
         style={{
           display: "flex",
@@ -319,7 +324,7 @@ const Dashboard = () => {
                   textAlign: "center"
                 }}
               >
-                Stake SOL/Step
+                Reward Options
               </div>
             </div>
             <style jsx>{`

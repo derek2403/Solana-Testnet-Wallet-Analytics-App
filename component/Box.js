@@ -17,9 +17,8 @@ const Box = ({ width, height, title, children }) => {
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for enhanced depth
         transition: "transform 0.3s ease", // Smooth transition for scaling
       }}
-      whileHover={{ 
-        scale: 1.02,
-        transition: { duration: 0.3 } // Ensure smooth scaling transition
+      whileHover={{
+         
       }}
     >
       {title && <h2 style={{ color: "#FFFFFF", marginBottom: "10px" }}>{title}</h2>}

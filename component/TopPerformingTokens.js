@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LiquidityBarChart from './LiquidityBarChart';
 
 const tokenData = [
   { symbol: 'BGG1', price: 0.00426485, change: 126.8, liquidity: 352240.49, imagePath: 'https://img.step.finance/unsafe/s-32/plain/https%3A%2F%2Fcoin-images.coingecko.com%2Fcoins%2Fimages%2F39794%2Fsmall%2FQmTz16M9Te1xQrBkPfuuZaq1rhfKCjNj1QSwGE32mbDS9Y_%25281%2529_%25281%2529.png%3F1724117373' },
@@ -151,7 +152,7 @@ const TopPerformingTokens = ({ limit, showPopup }) => {
             </h2>
             <TopPerformingTokens limit={0} showPopup={false} />
             <OnChainMarkets />
-            <LiquidityChart />
+            <LiquidityBarChart />
             <button
               onClick={() => setIsPopupOpen(false)}
               style={{
