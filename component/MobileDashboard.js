@@ -42,7 +42,8 @@ const MobileDashboard = () => {
           padding: "15px",
           boxSizing: "border-box",
           marginTop: "15%",
-          gap: "15px"
+          gap: "15px",
+          zIndex: "100"
         }}
       >
         <Box title="Balance">
