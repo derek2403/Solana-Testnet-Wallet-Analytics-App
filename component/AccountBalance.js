@@ -37,20 +37,27 @@ const AccountBalance = () => {
 
   if (!pkey) {
     return (
-      <>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh', // Adjust height as needed
+        textAlign: 'center',
+      }}>
         <img 
           src="/bankrupt.png" 
           alt="Connect Wallet" 
           style={{
             width: '100px',
             height: '100px',
-            objectFit: 'contain'
+            objectFit: 'contain',
           }}
         />
-        <p style={{ marginTop: '10px', color: '#FFFFFF' }}>
+        <p style={{ color: '#FFFFFF' }}>
           Please connect your wallet to view account balance
         </p>
-      </>
+      </div>
     );
   }
   
