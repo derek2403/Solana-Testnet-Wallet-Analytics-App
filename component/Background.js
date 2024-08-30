@@ -13,7 +13,6 @@ const COLORS = ["#9945FF", "#14F195"]; // Solana Purple and Solana Green
 
 const Background = () => {
   const colorProgress = useMotionValue(0);
-  const [currentColor, setCurrentColor] = useState(COLORS[0]);
 
   const backgroundColor = useTransform(colorProgress, [0, 1], COLORS);
 
@@ -38,7 +37,7 @@ const Background = () => {
         width: "100%",
         height: "100%",
         backdropFilter: "blur(5px)",
-        zIndex: -1,
+        zIndex: 1,
       }}
     >
       <Canvas style={{ position: "absolute", top: 0, left: 0 }}>

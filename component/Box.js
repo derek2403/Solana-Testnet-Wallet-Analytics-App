@@ -16,6 +16,7 @@ const Box = ({ width, height, title, children }) => {
         border: "1px solid rgba(255, 255, 255, 0.1)", // Subtle border
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Optional shadow for enhanced depth
         transition: "transform 0.3s ease", // Smooth transition for scaling
+        zIndex: 100, // Ensure the box is above other elements
       }}
       whileHover={{
          
