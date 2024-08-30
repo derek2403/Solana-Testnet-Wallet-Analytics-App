@@ -38,6 +38,7 @@ const Background = () => {
         width: "100%",
         height: "100%",
         backdropFilter: "blur(5px)",
+        zIndex: -1,
       }}
     >
       <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
