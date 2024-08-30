@@ -55,7 +55,7 @@ const Navbar = () => {
       <div style={desktopNavbarStyles.inputContainer}>
         <input
           type="text"
-          placeholder="Search .sol domain"
+          placeholder="Search .sol domain or any Solana address"
           style={desktopNavbarStyles.inputField}
         />
         <Search style={{ marginLeft: '-30px', color: '#6b7280' }} size={20} />
