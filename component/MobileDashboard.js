@@ -122,7 +122,7 @@ const MobileDashboard = () => {
           <TopPerformingTokens limit={3} showPopup={true} />
         </Box>
         
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "15px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "15px", zIndex:"100" }}>
           {boxItemsLoaded ? (
             boxItems.map((item, index) => (
               <div
