@@ -106,22 +106,231 @@ const Dashboard = () => {
           </Box>
         </div>
 
-        <div style={{ display: "flex", gap: "20px", width: "100%" }}>
-          <Box width="23%">
-            <div>Bitcoin</div>
-            <div>USD 53,260.20</div>
+        <div style={{ display: "flex", gap: "20px", width: "100%", height: "35vh" }}>
+        <Box 
+            width="23%" 
+            style={{ 
+              position: "relative", 
+              overflow: "hidden", 
+              height: "30vh", // Adjust this value as needed
+              cursor: "pointer"
+            }}
+          >
+            <div 
+              style={{ 
+                position: "relative", 
+                width: "100%", 
+                height: "100%", 
+                overflow: "hidden"
+              }}
+            >
+              <img 
+                src="referral.png" 
+                alt="referral" 
+                style={{ 
+                  width: "200%", // Increased from 100% to allow for revealing
+                  height: "200%", // Increased from 100% to allow for revealing
+                  objectFit: "cover", 
+                  position: "absolute", 
+                  top: "-35%",
+                  left: "-50%", 
+                  zIndex: -1, 
+                  opacity: 0.2,
+                  transition: "all 0.3s ease-in-out"
+                }} 
+              />
+              <div 
+                style={{ 
+                  fontSize: "2rem", 
+                  fontWeight: "bold", 
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 1
+                }}
+              >
+                Referral
+              </div>
+            </div>
+            <style jsx>{`
+              .nft-box:hover img {
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                width: 100%;
+                height: 100%;
+              }
+            `}</style>
           </Box>
-          <Box width="23%">
-            <div>Ethereum</div>
-            <div>USD 1,643.80</div>
+          <Box 
+            width="23%" 
+            style={{ 
+              position: "relative", 
+              overflow: "hidden", 
+              height: "30vh", // Adjust this value as needed
+              cursor: "pointer"
+            }}
+          >
+            <div 
+              style={{ 
+                position: "relative", 
+                width: "100%", 
+                height: "100%", 
+                overflow: "hidden"
+              }}
+            >
+              <img 
+                src="nft.png" 
+                alt="NFT" 
+                style={{ 
+                  width: "100%", // Increased from 100% to allow for revealing
+                  height: "100%", // Increased from 100% to allow for revealing
+                  objectFit: "cover", 
+                  position: "absolute",  
+                  zIndex: -1, 
+                  opacity: 0.2,
+                  transition: "all 0.3s ease-in-out"
+                }} 
+              />
+              <div 
+                style={{ 
+                  fontSize: "2rem", 
+                  fontWeight: "bold", 
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 1,
+                  textAlign: "center"
+                }}
+              >
+                NFT Gallery
+              </div>
+            </div>
+            <style jsx>{`
+              .nft-box:hover img {
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                width: 100%;
+                height: 100%;
+              }
+            `}</style>
           </Box>
-          <Box width="23%">
-            <div>Tether</div>
-            <div>USD 0.9999</div>
+          <Box 
+            width="23%" 
+            style={{ 
+              position: "relative", 
+              overflow: "hidden", 
+              height: "30vh", // Adjust this value as needed
+              cursor: "pointer"
+            }}
+          >
+            <div 
+              style={{ 
+                position: "relative", 
+                width: "100%", 
+                height: "100%", 
+                overflow: "hidden"
+              }}
+            >
+              <img 
+                src="stake.png" 
+                alt="referral" 
+                style={{ 
+                  width: "100%", // Increased from 100% to allow for revealing
+                  height: "100%", // Increased from 100% to allow for revealing
+                  objectFit: "cover", 
+                  position: "absolute", 
+                  top: "0%",
+                  left: "0", 
+                  zIndex: -1, 
+                  opacity: 0.2,
+                  transition: "all 0.3s ease-in-out"
+                }} 
+              />
+              <div 
+                style={{ 
+                  fontSize: "2rem", 
+                  fontWeight: "bold", 
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 1,
+                  textAlign: "center"
+                }}
+              >
+                Stake SOL/Step
+              </div>
+            </div>
+            <style jsx>{`
+              .nft-box:hover img {
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                width: 100%;
+                height: 100%;
+              }
+            `}</style>
           </Box>
-          <Box width="23%">
-            <div>Binance Coin</div>
-            <div>USD 247.43</div>
+          <Box 
+            width="23%" 
+            style={{ 
+              position: "relative", 
+              overflow: "hidden", 
+              height: "30vh", // Adjust this value as needed
+              cursor: "pointer"
+            }}
+          >
+            <div 
+              style={{ 
+                position: "relative", 
+                width: "100%", 
+                height: "100%", 
+                overflow: "hidden"
+              }}
+            >
+              <img 
+                src="reward.png" 
+                alt="referral" 
+                style={{ 
+                  width: "110%", // Increased from 100% to allow for revealing
+                  height: "110%", // Increased from 100% to allow for revealing
+                  objectFit: "cover", 
+                  position: "absolute", 
+                  top: "0%",
+                  left: "-5%", 
+                  zIndex: -1, 
+                  opacity: 0.2,
+                  transition: "all 0.3s ease-in-out"
+                }} 
+              />
+              <div 
+                style={{ 
+                  fontSize: "2rem", 
+                  fontWeight: "bold", 
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 1,
+                  textAlign: "center"
+                }}
+              >
+                Stake SOL/Step
+              </div>
+            </div>
+            <style jsx>{`
+              .nft-box:hover img {
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                width: 100%;
+                height: 100%;
+              }
+            `}</style>
           </Box>
         </div>
       </div>
